@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!--
+     /* FHEM tablet ui */
+     /*
+     * UI builder framework for FHEM
+     *
+     * Version: 2.5.*
+     * URL: https://github.com/knowthelist/fhem-tablet-ui
+     *
+     * Copyright (c) 2015-2017 Mario Stephan <mstephan@shared-files.de>
+     * Under MIT License (http://www.opensource.org/licenses/mit-license.php)
+     */
+    -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
+    <link rel="manifest" href="custom/manifest.json">
+
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="FHEM UI">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="apple-touch-icon" href="custom/images/apple-touch-icon-precomposed.png"/>
+
+    <meta name="application-name" content="FHEM UI">
+    
+    <meta name="theme-color" content="#000000">
+    <meta name="msapplication-navbutton-color" content="#000000">
+    <meta name="msapplication-starturl" content="http://fhem.snow.meissner.im/fhem/ftui/">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="css/fhem-blue-ui.css" />
+    <link rel="stylesheet" href="custom/styles.css" />
+
+    <script src="js/fhem-tablet-ui.js" defer></script>
+
+
+    <!-- Remove this line to enable for usage with WebViewControl
+    <script defer>var wvcDevices = {'12345': 'Tablet'}; var wvcUserCssFile="webviewcontrol.css"</script>
+    <script src="../pgm2/cordova-2.3.0.js" defer></script>
+    <script src="../pgm2/webviewcontrol.js" defer></script>
+    <!-- End for WebViewControl -->
+
+   <!-- <meta name="gridster_cols" content="12">
+    <meta name="gridster_rows" content="9">
+    <meta name="gridster_base_width" content="11">
+    <meta name="gridster_base_height" content="13">-->
+
+    <!--    <meta name="gridster_min_width" content="100">
+        <meta name="gridster_min_height" content="100">-->
+
+   <!-- <meta name="widget_margin" content="4">-->
+
+
+    <title>Home</title>
+</head>
+
+<body>
+    <div class="row">
+        <div data-type="pagetab" data-url="overview.html" data-background-icon="fa-square" data-icon="fa-home" data-text="Home" class="cell inline"></div>
+        <div data-type="pagetab" data-url="dashboard.html" data-background-icon="fa-square" data-device="dummy1" data-text="Dashboard"
+            class="cell inline"></div>
+    </div>
+
+    <div class="gridster">
+        <ul>
+            <li data-row="1" data-col="1" data-sizey="2" data-sizex="1">
+                <header>Frederik</header>
+                <div class="sheet">
+                    <div class="row">
+
+                        <div class="cell-20">
+                            <div data-type="switch" data-device="FR_LED_Bett" data-icon="oa-light_led_stripe_rgb" class="inline"></div>
+                            <div class="cell inline left-align">LED Stripe</div>
+                        </div>
+
+                        <div class="cell">
+                            <div data-type="switch" data-device="FR_SW_Lampe" data-icon="oa-light_office" class="inline"></div>
+                            <div class="cell inline left-align">Nachtlicht</div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="cell">
+
+                            <div data-type="switch" data-device="FR_LED_Bett" data-icon="oa-light_led_stripe_rgb" data-get="brightness" data-set="brightness"
+                                data-get-off="0" data-set-off="0" data-get-on="!0" data-set-on="100" data-on-background-color="WZ_LED_Desk:RGB"
+                                data-off-color="#000000"></div>
+                            <div>RGB</div>
+                        </div>
+
+                        <div class="cell">
+                            <div data-type="switch" data-device="FR_LED_Bett" data-icon="oa-light_led_stripe_rgb" data-get="WHITE" data-set="WHITE" data-get-off="0"
+                                data-set-off="0" data-get-on="!0" data-set-on="100" data-on-background-color="#FFFFFF" data-off-background-color="#000000"
+                                data-on-color="#000000" data-off-color="#FFFFFF"></div>
+                            <div>Weiß</div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+            </li>
+
+            <li data-row="3" data-col="1" data-sizey="4" data-sizex="1">
+                <header>Wohnzimmer</header>
+                <div class="sheet">
+
+                    <div class="row">
+                        <div class="cell-30">
+                            <div class="sheet">
+                                <div class="row">
+                                    <div class="cell-20">
+                                        <div data-type="switch" data-device="WZ_SW_LightDesk" data-icon="oa-light_office"></div>
+                                    </div>
+                                    <div class="cell left-align">Schreibtichlampe</div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="cell-20">
+                                        <div class="inline" data-type="switch" data-device="WZ_SW_Strahler" data-icon="oa-light_floor_lamp"></div>
+                                    </div>
+                                    <div class="cell left-align">Strahler</div>
+                                </div>
+
+
+                                <div class="row">
+                                    <div class="cell-20">
+                                        <div class="inline" data-type="switch" data-device="WZ_SW_TV" data-icon="fa-tv"></div>
+                                    </div>
+                                    <div class="cell left-align">TV</div>
+                                </div>
+
+
+
+                                <div class="row">
+                                    <div class="cell-20">
+                                        <div class="inline" data-type="switch" data-device="WZ_SW_Anlage" data-icon="oa-audio_sound"></div>
+                                    </div>
+                                    <div class="cell left-align">Anlage</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+
+                        <div class="cell-30">
+                            <div class="sheet">
+                                <div class="row">
+                                    <div class="inline">
+                                        <div data-type="switch" data-device="WZ_LED_Desk" data-icon="oa-light_led_stripe_rgb"></div>
+                                        <div>Alles</div>
+                                    </div>
+
+                                    <div class="inline">
+                                        <div data-type="switch" data-device="WZ_LED_Desk" data-icon="oa-light_led_stripe_rgb" data-get="brightness" data-set="brightness"
+                                            data-get-off="0" data-set-off="0" data-get-on="!0" data-set-on="100" data-on-background-color="WZ_LED_Desk:RGB"
+                                            data-off-color="#000000"></div>
+                                        <div>RGB</div>
+                                    </div>
+                                </div>
+
+
+                               
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                    
+
+                </div>
+
+
+            </li>
+
+        </ul>
+    </div>
+
+
+</body>
+
+</html>
